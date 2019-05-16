@@ -46,7 +46,7 @@ public class AircraftDAO {
 				+ "	passengers integer NOT NULL,\n" + "	engine_power text NOT NULL,\n"
 				+ "	engine_manufacturer text NOT NULL,\n" + "	engine_model text NOT NULL,\n"
 				+ "	num_engines integer NOT NULL,\n" + "	length real NOT NULL,\n" + "	height real NOT NULL,\n"
-				+ "	wing_span real NOT NULL,\n"  + "	ceiling integer NOT NULL\n" + ");";
+				+ "	wing_span real NOT NULL,\n" + "	ceiling integer NOT NULL\n" + ");";
 		try {
 			Statement statement = conn.createStatement();
 			statement.execute(sql);
@@ -135,8 +135,7 @@ public class AircraftDAO {
 		Aircraft aircraft = new Aircraft();
 		String sql = "SELECT id, manufacturer, name, type, range, speed, "
 				+ "load, passengers, engine_power, engine_manufacturer, engine_model, num_engines, "
-				+ "length, height, wing_span, ceiling "
-				+ "FROM aircraft WHERE manufacturer = ? AND name = ?";
+				+ "length, height, wing_span, ceiling " + "FROM aircraft WHERE manufacturer = ? AND name = ?";
 		Connection conn = getConnection();
 		try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
 			pstmt.setString(1, manufacturer);
@@ -282,7 +281,8 @@ public class AircraftDAO {
 	}
 
 	public static double round(double value) {
-	    double scale = Math.pow(10, 2);
-	    return Math.round(value * scale) / scale;
+		double scale = Math.pow(10, 2);
+		return Math.round(value * scale) / scale;
 	}
+
 }

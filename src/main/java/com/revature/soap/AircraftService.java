@@ -14,7 +14,7 @@ import com.revature.service.ManufacturerDAO;
 
 @WebService
 public class AircraftService {
-	
+
 	@WebMethod
 	public Manufacturer getManufacturer(@WebParam(name = "manufacturer") String manufacturer) {
 		Manufacturer result;
@@ -22,7 +22,7 @@ public class AircraftService {
 		result = dao.getManufacturer(manufacturer);
 		return result;
 	}
-	
+
 	@WebMethod
 	public List<Manufacturer> getAircraftManufacturers() {
 		List<Manufacturer> list = new ArrayList<Manufacturer>();
@@ -30,7 +30,7 @@ public class AircraftService {
 		list = dao.getAll();
 		return list;
 	}
-	
+
 	@WebMethod
 	public List<Aircraft> getAllAircraft() {
 		List<Aircraft> list = new ArrayList<Aircraft>();
@@ -38,16 +38,17 @@ public class AircraftService {
 		list = dao.getAll();
 		return list;
 	}
-	
+
 	@WebMethod
 	public List<Aircraft> getAircraftByManufacturer(@WebParam(name = "manufacturer") String manufacturer) {
 		AircraftDAO dao = AircraftDAO.getDAO();
 		List<Aircraft> list = dao.getAircraft(manufacturer);
 		return list;
 	}
-	
+
 	@WebMethod
-	public Aircraft getAircraftByManufacturerAndModel(@WebParam(name = "manufacturer") String manufacturer, @WebParam(name = "model") String model) {
+	public Aircraft getAircraftByManufacturerAndModel(@WebParam(name = "manufacturer") String manufacturer,
+			@WebParam(name = "model") String model) {
 		AircraftDAO dao = AircraftDAO.getDAO();
 		Aircraft aircraft = dao.getAircraft(manufacturer, model);
 		return aircraft;

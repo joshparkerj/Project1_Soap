@@ -152,4 +152,5 @@ public class ManufacturerDAO {
 		}
 		return manufacturer;
 	}
+
 }
