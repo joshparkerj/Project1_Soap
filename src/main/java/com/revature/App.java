@@ -20,6 +20,7 @@ import javax.swing.SwingConstants;
 
 public class App extends javax.swing.JFrame {
 
+	private static final long serialVersionUID = -6769450683104970026L;
 	private JPanel contentPane;
 	private static App frame;
 	JLabel soapLabel;
@@ -28,6 +29,8 @@ public class App extends javax.swing.JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		AircraftPublisher.publish();
+		/*
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -38,7 +41,7 @@ public class App extends javax.swing.JFrame {
 					e.printStackTrace();
 				}
 			}
-		});
+		});*/
 	}
 
 	/**

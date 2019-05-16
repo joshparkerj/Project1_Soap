@@ -14,9 +14,7 @@ import com.revature.domain.Manufacturer;
 public class ManufacturerDAO {
 
 	private static ManufacturerDAO dao = new ManufacturerDAO();
-	private static final String url = "jdbc:postgresql://localhost:5432/postgresProject1";
-	private static final String user = "sweinhart";
-	private static final String password = "Password";
+	private static final String url = "jdbc:postgresql://localhost:5432/p1SOAP";
 	private static Connection conn;
 
 	public static ManufacturerDAO getDAO() {
@@ -31,7 +29,7 @@ public class ManufacturerDAO {
 		}
 		if (conn == null) {
 			try {
-				conn = DriverManager.getConnection(url, user, password);
+				conn = DriverManager.getConnection(url);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

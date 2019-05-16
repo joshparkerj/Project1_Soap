@@ -16,9 +16,7 @@ import com.revature.service.ManufacturerDAO;
 
 import javax.swing.JTable;
 import java.awt.Font;
-import java.awt.LayoutManager;
 import java.awt.Window;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -33,7 +31,6 @@ import javax.swing.ListSelectionModel;
 import com.revature.domain.Aircraft;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.border.CompoundBorder;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import java.awt.GridBagLayout;
@@ -42,13 +39,12 @@ import java.awt.Insets;
 import javax.swing.border.MatteBorder;
 import java.awt.Color;
 import javax.swing.border.LineBorder;
-import javax.swing.table.DefaultTableModel;
 import java.awt.Dimension;
 import java.awt.ComponentOrientation;
-import javax.swing.JTextArea;
 
 public class DatabaseUI extends javax.swing.JFrame {
 
+	private static final long serialVersionUID = -4032249384334439850L;
 	private static JPanel contentPane;
 	private static AircraftTableModel tableModel1 = new AircraftTableModel();;
 	private static ManufacturerTableModel tableModel2 =  new ManufacturerTableModel();

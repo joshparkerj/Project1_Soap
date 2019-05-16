@@ -7,6 +7,8 @@ import javax.swing.table.AbstractTableModel;
 
 public class AircraftTableModel extends AbstractTableModel{
 
+	private static final long serialVersionUID = -6433466108580027387L;
+
 	private String [] columnNames = {"Manufacturer", "Aircraft", "Type"};
 	
 	private List<Aircraft> aircraftList = new ArrayList<Aircraft>();

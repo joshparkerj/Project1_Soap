@@ -7,6 +7,8 @@ import javax.swing.table.AbstractTableModel;
 
 public class ManufacturerTableModel extends AbstractTableModel{
 
+	private static final long serialVersionUID = -1093354600035603850L;
+
 	private String [] columnNames = {"Manufacturer", "City", "State"};
 	
 	private List<Manufacturer> manufacturerList = new ArrayList<Manufacturer>();
